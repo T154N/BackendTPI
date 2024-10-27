@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,8 +13,10 @@ import java.time.LocalDateTime;
 @Table(name = "Pruebas")
 public class Prueba {
 
-    @EmbeddedId
-    private PruebaId id;
+    @Id
+    @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "FECHA_HORA_INICIO", nullable = false)
     private LocalDateTime fecchaHoraInicio;

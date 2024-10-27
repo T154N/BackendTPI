@@ -17,6 +17,7 @@ import java.util.Set;
 public class Interesado {
     @Id
     @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long intereasadoId;
 
 

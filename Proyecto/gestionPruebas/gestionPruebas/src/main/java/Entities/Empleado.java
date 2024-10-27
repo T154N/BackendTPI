@@ -16,6 +16,7 @@ public class Empleado {
 
     @Id
     @Column(name="LEGAJO", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long empleadoLegajo;
 
     @Column(name="NOMBRE", nullable = false)
